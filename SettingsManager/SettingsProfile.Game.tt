@@ -1,0 +1,72 @@
+﻿/* Copyright 2024 zakuro <z@kuro.red> (https://x.com/zakuro9715)
+ * 
+ * This file is part of SettingsManager.
+ * 
+ * SettingsManager is free software: you can redistribute it and/or modify it under the
+ * terms of the GNU General Public License as published by the Free Software Foundation, either
+ * version 3 of the License, or (at your option) any later version.
+ * 
+ * SettingsManager is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+ * PURPOSE. See the GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License along with
+ * SettingsManager. If not, see <https://www.gnu.org/licenses/>.
+ */
+<#@ include file="GameSettingsTemplate.tt" #>
+using Colossal.Json;
+using Game.Input;
+using Game.Settings;
+using System;
+using System.IO;
+
+namespace SettingsManager
+{
+	public partial class SettingsProfile
+	{
+<# foreach(var setting in settings.Values) { #>
+		public bool <#= setting.PropName #> { get; set; } = true;
+
+<# } #>
+
+		private void SaveGameSettings()
+		{
+<# foreach(var setting in settings.Values) { #>
+			if (<#= setting.PropName #>)
+			{
+				SaveText("<#= setting.FileName #>", JSON.Dump(SharedSettings.instance.<#= setting.Name #>));
+			}
+<# } #>
+		}
+
+		private void LoadGameSettings()
+		{
+<# foreach(var setting in settings.Values) { #>
+
+			if (<#= setting.PropName #>)
+			{
+				try
+				{
+					var data = JSON.Load(File.ReadAllText(Path.Combine(GetDataDirectory(), "<#= setting.FileName #>")));
+<# if (setting.Name == "keybinding") { #>
+					var inputBindngVersion = InputSettings.GetInputBindingVersion();
+					InputManager.instance.ResetAllBindings();
+					JSON.WriteInto(data, SharedSettings.instance.keybinding);
+					InputManager.instance.EventActionsChanged();
+<# } else { #>
+					SharedSettings.instance.<#= setting.Name #>.SetDefaults();
+					JSON.WriteInto(data, SharedSettings.instance.<#= setting.Name #>);
+<# } #>
+					SharedSettings.instance.<#= setting.Name #>.ApplyAndSave();
+				}
+				catch(Exception e)
+				{
+					Mod.log.Error(e, "Failed to read <#= setting.FileName #>");
+					throw;
+				}
+			}
+<# } #>
+
+		}
+	}
+}
