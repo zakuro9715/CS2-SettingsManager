@@ -1,7 +1,7 @@
 ﻿{
   "Options.SECTION[SettingsManager.SettingsManager.Mod]": "SettingsManager",
-  "Options.OPTION_DESCRIPTION[SettingsManager.SettingsManager.Mod.Setting.Include{name}Settings]": "Save/Load {name} Settings",
-  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Profile]": "Profile",
+  "Options.OPTION_DESCRIPTION[SettingsManager.SettingsManager.Mod.Setting.Include{name}Settings]": "Zapisz/Wczytaj ustawienia {name}",
+  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Profile]": "Profil",
   "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.ProfileName]": "Name",
   "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Create]": "Create",
   "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Delete]": "Delete",
