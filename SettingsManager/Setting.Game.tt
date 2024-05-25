@@ -1,0 +1,62 @@
+﻿/* Copyright 2024 zakuro <z@kuro.red> (https://x.com/zakuro9715)
+ * 
+ * This file is part of SettingsManager.
+ * 
+ * SettingsManager is free software: you can redistribute it and/or modify it under the
+ * terms of the GNU General Public License as published by the Free Software Foundation, either
+ * version 3 of the License, or (at your option) any later version.
+ * 
+ * SettingsManager is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
+ * PURPOSE. See the GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License along with
+ * SettingsManager. If not, see <https://www.gnu.org/licenses/>.
+ */
+<#@ include file="GameSettingsTemplate.tt" #>
+using Colossal;
+using Colossal.Json;
+using Colossal.Localization;
+using Game.Settings;
+using System.Collections.Generic;
+
+namespace SettingsManager
+{
+	public partial class Setting
+	{
+        public const string GameSettingsGroup = "Game Settings";
+		
+        [SettingsUISection(MainTab, ProfileSelectSettingsGroup)]
+		[Exclude]
+        public bool AllGameSettings
+        {
+            get => <#= string.Join(" && ", propNames.Select((p) => $"GameSettings{p}")) #>;
+            set
+            {
+<# foreach(var prop in propNames) { #>
+                GameSettings<#= prop #> = value;
+<# } #>
+            }
+        }
+<# foreach(var prop in propNames) { #>
+        [SettingsUISection(MainTab, ProfileSelectSettingsGroup)]
+		[Exclude]
+		public bool GameSettings<#= prop #>
+        {
+<# if (prop == "Input") { #>
+            get => Profile.<#= prop #>;
+            set => Profile.Keybinding = Profile.Input = value;
+<# } else { #>
+            get => Profile.<#= prop #>;
+            set => Profile.<#= prop #> = value;
+<# }#>
+	    }
+
+<# } #>
+		private void SetGameSettingsDefaults() {
+<# foreach(var prop in propNames) { #>
+			GameSettings<#= prop #> = true;
+<# } #>
+		}
+	}
+}

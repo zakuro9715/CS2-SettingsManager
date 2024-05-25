@@ -1,0 +1,3 @@
+files:
+  - source: "/SettingsManager/Locales/en-US.json"
+    translation: "/SettingsManager/Locales/%locale%.json"

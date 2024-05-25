@@ -1,0 +1,17 @@
+﻿{
+  "Options.SECTION[SettingsManager.SettingsManager.Mod]": "Settings Manager",
+  "Options.OPTION_DESCRIPTION[SettingsManager.SettingsManager.Mod.Setting.Include{name}Settings]": "Include {name} Settings",
+  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.ProfileSelect]": "Profile",
+  "Options.OPTION_DESCRIPTION[SettingsManager.SettingsManager.Mod.Setting.ProfileSelect]": "Selected profile",
+  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.ProfileName]": "Name of Profile",
+  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Create]": "Create",
+  "Options.OPTION_DESCRIPTION[SettingsManager.SettingsManager.Mod.Setting.Create]": "Create new profile",
+  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Delete]": "Delete",
+  "Options.OPTION_DESCRIPTION[SettingsManager.SettingsManager.Mod.Setting.Delete]": "Delete selected profile",
+  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Save]": "Save",
+  "Options.OPTION_DESCRIPTION[SettingsManager.SettingsManager.Mod.Setting.Save]": "Save settings to selected profile",
+  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Load]": "Load",
+  "Options.OPTION_DESCRIPTION[SettingsManager.SettingsManager.Mod.Setting.Load]": "Load settings from selected profile",
+  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.AllGameSettings]": "All",
+  "Options.OPTION_DESCRIPTION[SettingsManager.SettingsManager.Mod.Setting.AllGameSettings]": "Include / Exclude All settings"
+}

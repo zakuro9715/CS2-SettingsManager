@@ -1,0 +1,58 @@
+﻿<Publish>
+	<!--Id must be set in order to update existed mod. it is not required for publishing mod for the first time-->
+	<ModId Value="" />
+	<!--Name of the mod to display to players-->
+	<DisplayName Value="SettingsManager" />
+	<!--Short description of the mod-->
+	<ShortDescription Value="Manage and switch Game settings." />
+	<!--Long description of the mod. Single line or multi line. Supports minimal markdown subset-->
+	<!--LongDescription Value="This is a long description" /-->
+	<LongDescription>
+Manage and switch Game settings.
+
+## Features
+
+- Save/Load Game settings as profile.
+- Selective Save/Load. For example, only Graphics settings.
+- Switch settings without restart Game. Loading settings is applied immediately.
+
+## Limitation
+
+Because of technical reasons, MOD settings are not supported for now.
+
+## Translation
+
+Welcome to contribute to the translation.
+
+You can contribute to the translation in the following ways:
+- [Crowdin](https://crowdin.com/project/cs2-settingsmanager)
+- [Edit files and create a pull request](https://github.com/zakuro9715/CS2-SettingsManager/tree/main/SettingsManager/Locales)
+	</LongDescription>
+	<!--Thumbnail-->
+	<Thumbnail Value="../Images/Thumbnail.png" />
+	<!--Screenshot, can be set multiple times-->
+	<Screenshot Value="../Images/Thumbnail.png" />
+	<Screenshot Value="../Images/Screenshot1.png" />
+	<Screenshot Value="../Images/Screenshot2_1.png" />
+	<Screenshot Value="../Images/Screenshot2_2.png" />
+	
+	<Screenshot Value="../Images/Screenshot3_1.png" />
+	<Screenshot Value="../Images/Screenshot3_2.png" />
+	<!--Tag, can be set multiple times-->
+	<Tag Value="Code Mod" />
+	<!--Link to the forum post where the mod can be discussed-->
+	<ForumLink Value="https://forum.paradoxplaza.com/forum/threads/settingsmanager.1681617/" />
+	<!--Version of the mod-->
+	<ModVersion Value="0.1.0" />
+	<!--Recommended version of the base game to use the mod-->
+	<GameVersion Value="1.*" />
+	<!--Dependency for the mod, can be set multiple times-->
+	<Dependency Id="" />
+	<!--Change log for new version. Single line or multi line. Supports minimal markdown subset-->
+	<ChangeLog Value="" />
+	<!--ChangeLog>
+	</ChangeLog-->
+	<!--External link. supported types are discord, github, youtube, twitch, x, paypal, patreon-->
+	<ExternalLink Type="github" Url="https://github.com/zakuro9715/CS2-SettingsManager" />
+	<ExternalLink Type="x" Url="https://x.com/zakuro_cs2" />
+</Publish>
