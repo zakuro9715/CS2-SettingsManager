@@ -1,11 +1,11 @@
 ﻿{
-  "Options.SECTION[SettingsManager.SettingsManager.Mod]": "SettingsManager",
-  "Options.OPTION_DESCRIPTION[SettingsManager.SettingsManager.Mod.Setting.Include{name}Settings]": "Save/Load {name} Settings",
-  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Profile]": "Profile",
-  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.ProfileName]": "Name",
-  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Create]": "Create",
-  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Delete]": "Delete",
-  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Save]": "Save",
-  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Load]": "Load",
-  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.AllGameSettings]": "All"
+  "Options.SECTION[SettingsManager.SettingsManager.Mod]": "Менеджер настроек",
+  "Options.OPTION_DESCRIPTION[SettingsManager.SettingsManager.Mod.Setting.Include{name}Settings]": "Сохранить/Загрузить настройки {name}",
+  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Profile]": "Профиль",
+  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.ProfileName]": "Имя",
+  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Create]": "Создать",
+  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Delete]": "Удалить",
+  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Save]": "Сохранить",
+  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Load]": "Загрузить",
+  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.AllGameSettings]": "Все"
 }
