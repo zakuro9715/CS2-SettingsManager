@@ -1,6 +1,8 @@
 ﻿{
   "Options.SECTION[SettingsManager.SettingsManager.Mod]": "SettingsManager",
   "Options.OPTION_DESCRIPTION[SettingsManager.SettingsManager.Mod.Setting.Include{name}Settings]": "{name}設定を含める",
+  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Profile]": "Profile",
+  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.ProfileName]": "Name",
   "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Create]": "作成",
   "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Delete]": "削除",
   "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Save]": "保存",
