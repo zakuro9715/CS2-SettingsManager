@@ -2,10 +2,10 @@
   "Options.SECTION[SettingsManager.SettingsManager.Mod]": "SettingsManager",
   "Options.OPTION_DESCRIPTION[SettingsManager.SettingsManager.Mod.Setting.Include{name}Settings]": "Zapisz/Wczytaj ustawienia {name}",
   "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Profile]": "Profil",
-  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.ProfileName]": "Name",
-  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Create]": "Create",
-  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Delete]": "Delete",
-  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Save]": "Save",
-  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Load]": "Load",
-  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.AllGameSettings]": "All"
+  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.ProfileName]": "Nazwa",
+  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Create]": "Stwórz",
+  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Delete]": "Usuń",
+  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Save]": "Zapisz",
+  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Load]": "Wczytaj",
+  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.AllGameSettings]": "Wszystko"
 }
