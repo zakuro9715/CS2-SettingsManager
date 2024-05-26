@@ -1,11 +1,11 @@
 ﻿{
   "Options.SECTION[SettingsManager.SettingsManager.Mod]": "SettingsManager",
-  "Options.OPTION_DESCRIPTION[SettingsManager.SettingsManager.Mod.Setting.Include{name}Settings]": "Save/Load {name} Settings",
-  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Profile]": "Profile",
-  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.ProfileName]": "Name",
-  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Create]": "Create",
-  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Delete]": "Delete",
-  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Save]": "Save",
-  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Load]": "Load",
-  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.AllGameSettings]": "All"
+  "Options.OPTION_DESCRIPTION[SettingsManager.SettingsManager.Mod.Setting.Include{name}Settings]": "Sauvegarder/Charger les paramètres « {name} »",
+  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Profile]": "Profil",
+  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.ProfileName]": "Nom",
+  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Create]": "Créer",
+  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Delete]": "Supprimer",
+  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Save]": "Sauvegarder",
+  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Load]": "Charger",
+  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.AllGameSettings]": "Tous"
 }
