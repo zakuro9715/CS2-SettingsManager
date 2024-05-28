@@ -58,6 +58,7 @@ namespace SettingsManager
             profileDropdownItemsVersion++;
             ApplyAndSave();
         }
+
         private DropdownItem<string>[] GetProfileDropdownItems() => (
             from p in Profiles
             orderby p.Index
