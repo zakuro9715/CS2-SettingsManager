@@ -47,17 +47,21 @@ namespace SettingsManager
         [SettingsUISection(MainTab, ProfileGroup)]
         [SettingsUIDropdown(typeof(Setting), nameof(GetProfileDropdownItems))]
         [SettingsUIValueVersion(typeof(Setting), nameof(GetProfileDropdownItemsVersion))]
-        public string ProfileSelect { set; get; } = SettingsProfile.DefaultID;
+        public string ProfileSelect { get; set; } = SettingsProfile.DefaultID;
 
-        public SettingsProfile Profile => Profiles.Find((p) => p.ID.ToString() == ProfileSelect);
+        public SettingsProfile Profile => Profiles.Find((p) => p.ID == ProfileSelect);
 
         int profileDropdownItemsVersion;
         public int GetProfileDropdownItemsVersion => profileDropdownItemsVersion;
-        private void OnProfilesChanged() => profileDropdownItemsVersion++;
+        private void OnProfilesChanged()
+        {
+            profileDropdownItemsVersion++;
+            ApplyAndSave();
+        }
         private DropdownItem<string>[] GetProfileDropdownItems() => (
             from p in Profiles
             orderby p.Index
-            select new DropdownItem<string>() { value = p.ID.ToString(), displayName = p.Name }
+            select new DropdownItem<string>() { value = p.ID, displayName = p.Name }
         ).ToArray();
 
         [Include]
@@ -83,7 +87,7 @@ namespace SettingsManager
             {
                 var p = SettingsProfile.Create($"Profile{Profiles.Count + 1}", Profiles.Count);
                 Profiles.Add(p);
-                ProfileSelect = p.ID.ToString();
+                ProfileSelect = p.ID;
                 OnProfilesChanged();
             }
         }
@@ -99,7 +103,7 @@ namespace SettingsManager
             {
                 var p = Profile;
                 Profiles.Remove(p);
-                ProfileSelect = Profiles.Last().ID.ToString();
+                ProfileSelect = Profiles.Last().ID;
                 OnProfilesChanged();
             }
         }

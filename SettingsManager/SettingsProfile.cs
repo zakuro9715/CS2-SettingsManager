@@ -24,28 +24,28 @@ namespace SettingsManager
     public partial class SettingsProfile
     {
         public const string DefaultID = "04514e78-da6b-44d9-98a8-085a24add044";
-        public Guid ID { get; }
+        public string ID { get; set; }
         public string Name { get; set; }
         public int Index { get; set; }
 
 
         public static string ProfilesDirecotry = Path.Combine(EnvPath.kUserDataPath, "SettingsManager", "Profiles");
 
-        public string GetDataDirectory() => Path.Combine(ProfilesDirecotry, ID.ToString());
+        public string GetDataDirectory() => Path.Combine(ProfilesDirecotry, ID);
         public string GetFilePath(string filename) => Path.Combine(GetDataDirectory(), filename);
 
         public static SettingsProfile Create(string name, int index) => new(Guid.NewGuid(), index, name);
         public static SettingsProfile CreateDefault() => new();
         public SettingsProfile() : this(DefaultID, 0, "Profile1") { }
 
-        public SettingsProfile(Guid id, int index, string name)
+        public SettingsProfile(string id, int index, string name)
         {
             ID = id;
             Index = index;
             Name = name;
         }
 
-        public SettingsProfile(string id, int index, string name) : this(Guid.Parse(id), index, name) { }
+        public SettingsProfile(Guid id, int index, string name) : this(id.ToString(), index, name) { }
 
         private bool EnsureDataDirectory() => IOUtils.EnsureDirectory(GetDataDirectory());
 
