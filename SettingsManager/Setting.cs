@@ -69,6 +69,7 @@ namespace SettingsManager
 
         [SettingsUISection(MainTab, ProfileGroup)]
         [SettingsUITextInput]
+        [Exclude]
         public string ProfileName
         {
             get => Profile.Name;
