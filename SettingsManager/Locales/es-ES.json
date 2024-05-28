@@ -1,6 +1,6 @@
 ﻿{
   "Options.SECTION[SettingsManager.SettingsManager.Mod]": "SettingsManager",
-  "Options.OPTION_DESCRIPTION[SettingsManager.SettingsManager.Mod.Setting.Include{name}Settings]": "Guardar/Cargar ajustes {name}",
+  "Options.OPTION_DESCRIPTION[SettingsManager.SettingsManager.Mod.Setting.Include{name}Settings]": "Guardar/Cargar ajuste {name}",
   "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Profile]": "Perfil",
   "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.ProfileName]": "Nombre",
   "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Create]": "Crear",
