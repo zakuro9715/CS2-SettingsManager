@@ -1,11 +1,11 @@
 ﻿{
   "Options.SECTION[SettingsManager.SettingsManager.Mod]": "游戏设置管理",
   "Options.OPTION_DESCRIPTION[SettingsManager.SettingsManager.Mod.Setting.Include{name}Settings]": "保存/加载{name}设置",
-  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Profile]": "Profile",
-  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.ProfileName]": "Name",
-  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Create]": "Create",
-  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Delete]": "Delete",
-  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Save]": "Save",
-  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Load]": "Load",
-  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.AllGameSettings]": "All"
+  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Profile]": "文件",
+  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.ProfileName]": "名称",
+  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Create]": "创建",
+  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Delete]": "删除",
+  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Save]": "保存",
+  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Load]": "加载",
+  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.AllGameSettings]": "全部"
 }
