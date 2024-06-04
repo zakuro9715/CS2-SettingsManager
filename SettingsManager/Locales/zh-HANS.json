@@ -1,6 +1,6 @@
 ﻿{
-  "Options.SECTION[SettingsManager.SettingsManager.Mod]": "SettingsManager",
-  "Options.OPTION_DESCRIPTION[SettingsManager.SettingsManager.Mod.Setting.Include{name}Settings]": "Save/Load {name} Settings",
+  "Options.SECTION[SettingsManager.SettingsManager.Mod]": "游戏设置管理",
+  "Options.OPTION_DESCRIPTION[SettingsManager.SettingsManager.Mod.Setting.Include{name}Settings]": "保存/加载{name}设置",
   "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Profile]": "Profile",
   "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.ProfileName]": "Name",
   "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Create]": "Create",
