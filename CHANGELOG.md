@@ -1,4 +1,8 @@
-﻿## 0.1.1
+﻿## 0.1.2
+
+- Fix issue about autosaves.
+ 
+## 0.1.1
 
 - Fix error in option UI.
 
