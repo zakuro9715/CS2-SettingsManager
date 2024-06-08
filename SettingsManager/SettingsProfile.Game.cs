@@ -18,6 +18,7 @@ using Game.Input;
 using Game.Settings;
 using System;
 using System.IO;
+using System.Text.RegularExpressions;
 
 namespace SettingsManager
 {
@@ -38,35 +39,45 @@ namespace SettingsManager
 		public bool Keybinding { get; set; } = true;
 
 
+		private string FilterGeneralSettingsJSON(string text) => Regex.Replace(text, ",\\s*\"autoSaveNow\": \\w+", "");
+
 		private void SaveGameSettings()
 		{
 			if (General)
 			{
-				SaveText("GeneralSettings.json", JSON.Dump(SharedSettings.instance.general));
+				var text = JSON.Dump(SharedSettings.instance.general);
+				text = FilterGeneralSettingsJSON(text);
+				SaveText("GeneralSettings.json", text);
 			}
 			if (Audio)
 			{
-				SaveText("AudioSettings.json", JSON.Dump(SharedSettings.instance.audio));
+				var text = JSON.Dump(SharedSettings.instance.audio);
+				SaveText("AudioSettings.json", text);
 			}
 			if (Gameplay)
 			{
-				SaveText("GameplaySettings.json", JSON.Dump(SharedSettings.instance.gameplay));
+				var text = JSON.Dump(SharedSettings.instance.gameplay);
+				SaveText("GameplaySettings.json", text);
 			}
 			if (Graphics)
 			{
-				SaveText("GraphicsSettings.json", JSON.Dump(SharedSettings.instance.graphics));
+				var text = JSON.Dump(SharedSettings.instance.graphics);
+				SaveText("GraphicsSettings.json", text);
 			}
 			if (UserInterface)
 			{
-				SaveText("InterfaceSettings.json", JSON.Dump(SharedSettings.instance.userInterface));
+				var text = JSON.Dump(SharedSettings.instance.userInterface);
+				SaveText("InterfaceSettings.json", text);
 			}
 			if (Input)
 			{
-				SaveText("InputSettings.json", JSON.Dump(SharedSettings.instance.input));
+				var text = JSON.Dump(SharedSettings.instance.input);
+				SaveText("InputSettings.json", text);
 			}
 			if (Keybinding)
 			{
-				SaveText("KeybindingSettings.json", JSON.Dump(SharedSettings.instance.keybinding));
+				var text = JSON.Dump(SharedSettings.instance.keybinding);
+				SaveText("KeybindingSettings.json", text);
 			}
 		}
 
@@ -77,6 +88,7 @@ namespace SettingsManager
 			{
 				if (TryReadText("GeneralSettings.json", out var text))
 				{
+					text = FilterGeneralSettingsJSON(text);
 					var data = JSON.Load(text);
 					SharedSettings.instance.general.SetDefaults();
 					JSON.WriteInto(data, SharedSettings.instance.general);

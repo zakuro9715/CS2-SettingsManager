@@ -19,6 +19,7 @@ using Game.Input;
 using Game.Settings;
 using System;
 using System.IO;
+using System.Text.RegularExpressions;
 
 namespace SettingsManager
 {
@@ -29,12 +30,18 @@ namespace SettingsManager
 
 <# } #>
 
+		private string FilterGeneralSettingsJSON(string text) => Regex.Replace(text, ",\\s*\"autoSaveNow\": \\w+", "");
+
 		private void SaveGameSettings()
 		{
 <# foreach(var setting in settings.Values) { #>
 			if (<#= setting.PropName #>)
 			{
-				SaveText("<#= setting.FileName #>", JSON.Dump(SharedSettings.instance.<#= setting.Name #>));
+				var text = JSON.Dump(SharedSettings.instance.<#= setting.Name #>);
+<# if (setting.Name == "general") { #>
+				text = FilterGeneralSettingsJSON(text);
+<# }#>
+				SaveText("<#= setting.FileName #>", text);
 			}
 <# } #>
 		}
@@ -47,6 +54,9 @@ namespace SettingsManager
 			{
 				if (TryReadText("<#= setting.FileName #>", out var text))
 				{
+<# if (setting.Name == "general") { #>
+					text = FilterGeneralSettingsJSON(text);
+<# }#>
 					var data = JSON.Load(text);
 <# if (setting.Name == "keybinding") { #>
 					var inputBindngVersion = InputSettings.GetInputBindingVersion();

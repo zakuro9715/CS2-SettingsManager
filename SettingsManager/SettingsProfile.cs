@@ -28,7 +28,6 @@ namespace SettingsManager
         public string Name { get; set; }
         public int Index { get; set; }
 
-
         public static string ProfilesDirecotry = Path.Combine(EnvPath.kUserDataPath, "SettingsManager", "Profiles");
 
         public string GetDataDirectory() => Path.Combine(ProfilesDirecotry, ID);
