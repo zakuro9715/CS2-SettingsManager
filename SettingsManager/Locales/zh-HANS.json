@@ -3,7 +3,7 @@
   "Options.OPTION_DESCRIPTION[SettingsManager.SettingsManager.Mod.Setting.Include{name}Settings]": "保存/加载{name}设置",
   "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Profile]": "文件",
   "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.ProfileName]": "名称",
-  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Create]": "创建",
+  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Create]": "新建",
   "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Delete]": "删除",
   "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Save]": "保存",
   "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Load]": "加载",
