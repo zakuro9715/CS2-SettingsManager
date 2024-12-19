@@ -1,7 +1,7 @@
 ﻿{
   "Options.SECTION[SettingsManager.SettingsManager.Mod]": "SettingsManager",
   "Options.OPTION_DESCRIPTION[SettingsManager.SettingsManager.Mod.Setting.Include{name}Settings]": "儲存 / 載入 {name} 設定",
-  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Profile]": "Profile",
+  "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Profile]": "設定檔",
   "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.ProfileName]": "名稱",
   "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Create]": "建立",
   "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Delete]": "刪除",
