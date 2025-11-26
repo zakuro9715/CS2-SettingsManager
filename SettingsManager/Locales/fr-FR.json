@@ -1,5 +1,5 @@
 ﻿{
-  "Options.SECTION[SettingsManager.SettingsManager.Mod]": "SettingsManager",
+  "Options.SECTION[SettingsManager.SettingsManager.Mod]": "Gestionnaire de paramètres",
   "Options.OPTION_DESCRIPTION[SettingsManager.SettingsManager.Mod.Setting.Include{name}Settings]": "Sauvegarder/Charger les paramètres « {name} »",
   "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.Profile]": "Profil",
   "Options.OPTION[SettingsManager.SettingsManager.Mod.Setting.ProfileName]": "Nom",
